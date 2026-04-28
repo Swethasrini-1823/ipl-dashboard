@@ -159,5 +159,7 @@ def update_dashboard(season):
     return kpi_cards, fig_wins, fig_toss, fig_ha, fig_season, table
 
 
+server = app.server
+
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=10000, debug=False)
