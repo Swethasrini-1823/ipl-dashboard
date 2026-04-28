@@ -1,7 +1,10 @@
 import pandas as pd
 import os
 
-DATA_PATH = "data/matches.csv"
+import os
+DATA_PATH = os.path.join(os.path.dirname(__file__), "data", "matches.csv")
+if not os.path.exists(DATA_PATH):
+    DATA_PATH = "matches.csv"
 
 def load_data():
     if not os.path.exists(DATA_PATH):
